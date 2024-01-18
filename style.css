@@ -1,0 +1,70 @@
+:root {
+  --timing: 1.5s;
+}
+
+.svg {
+  position: relative;
+  left: 45vw;
+  top: 45vh;
+  width: 25vw;
+  height: 25vh;
+  overflow: visible;
+}
+.svg.stop #hand {
+  animation-play-state: paused;
+}
+.svg.stop #arm-group {
+  animation-play-state: paused;
+}
+.svg.stop #front-arm-group {
+  animation-play-state: paused;
+}
+
+#hand {
+  transform-origin: 70% 60%;
+  animation: hand-anim var(--timing) ease-in-out infinite;
+}
+
+#arm-group {
+  transform-origin: 0% 60%;
+  animation: arm-anim var(--timing) ease-in-out infinite;
+}
+
+#front-arm-group {
+  transform-origin: 35% 60%;
+  animation: front-arm-anim var(--timing) ease-in-out infinite;
+}
+
+@keyframes arm-anim {
+  0% {
+    transform: rotateZ(20deg);
+  }
+  50% {
+    transform: rotateZ(-60deg);
+  }
+  100% {
+    transform: rotateZ(20deg);
+  }
+}
+@keyframes front-arm-anim {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
+@keyframes hand-anim {
+  0% {
+    transform: rotateZ(30deg);
+  }
+  50% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateZ(30deg);
+  }
+}/*# sourceMappingURL=style.css.map */
