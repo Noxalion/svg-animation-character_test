@@ -2,7 +2,7 @@
   --timing: 1.5s;
 }
 
-.btnStop {
+.btnContainer {
   position: absolute;
   left: 10vw;
   top: 10vh;
@@ -19,6 +19,24 @@
 .svg * {
   animation-delay: 0.2s;
 }
+.svg.wave #hand {
+  animation: left-hand-anim var(--timing) ease-in-out infinite;
+}
+.svg.wave #left-arm-group {
+  animation: left-arm-anim var(--timing) ease-in-out infinite;
+}
+.svg.wave #front-arm-group {
+  animation: left-front-arm-anim var(--timing) ease-in-out infinite;
+}
+.svg.wave #hand_2 {
+  animation: right-hand-anim var(--timing) ease-in-out infinite;
+}
+.svg.wave #right-arm-group {
+  animation: right-arm-anim var(--timing) ease-in-out infinite;
+}
+.svg.wave #front-arm-group_2 {
+  animation: right-front-arm-anim var(--timing) ease-in-out infinite;
+}
 .svg.stop #hand, .svg.stop #left-arm-group, .svg.stop #front-arm-group, .svg.stop #hand_2, .svg.stop #right-arm-group, .svg.stop #front-arm-group_2, .svg.stop #upper-body-group, .svg.stop #lower-body-group,
 .svg.stop #above-ribs-group, .svg.stop #head-group, .svg.stop #head, .svg.stop #right-leg-group, .svg.stop #front-leg-group, .svg.stop #left-leg-group, .svg.stop #front-leg-group_2 {
   animation-play-state: paused;
@@ -26,17 +44,58 @@
 
 #hand {
   transform-origin: 87% 30%;
-  animation: left-hand-anim var(--timing) ease-in-out infinite;
 }
 
 #left-arm-group {
   transform-origin: 62% 30%;
-  animation: left-arm-anim var(--timing) ease-in-out infinite;
 }
 
 #front-arm-group {
   transform-origin: 74% 30%;
-  animation: left-front-arm-anim var(--timing) ease-in-out infinite;
+}
+
+#hand_2 {
+  transform-origin: 13% 30%;
+}
+
+#right-arm-group {
+  transform-origin: 38% 30%;
+}
+
+#front-arm-group_2 {
+  transform-origin: 26% 30%;
+}
+
+#upper-body-group, #lower-body-group {
+  transform-origin: 50% 60%;
+}
+
+#above-ribs-group {
+  transform-origin: 50% 45%;
+}
+
+#head-group {
+  transform-origin: 50% 26%;
+}
+
+#head {
+  transform-origin: 50% 24%;
+}
+
+#right-leg-group {
+  transform-origin: 43% 68%;
+}
+
+#front-leg-group {
+  transform-origin: 43% 82%;
+}
+
+#left-leg-group {
+  transform-origin: 57% 68%;
+}
+
+#front-leg-group_2 {
+  transform-origin: 57% 82%;
 }
 
 @keyframes left-arm-anim {
@@ -72,21 +131,6 @@
     transform: rotateZ(10deg);
   }
 }
-#hand_2 {
-  transform-origin: 13% 30%;
-  animation: right-hand-anim var(--timing) ease-in-out infinite;
-}
-
-#right-arm-group {
-  transform-origin: 38% 30%;
-  animation: right-arm-anim var(--timing) ease-in-out infinite;
-}
-
-#front-arm-group_2 {
-  transform-origin: 26% 30%;
-  animation: right-front-arm-anim var(--timing) ease-in-out infinite;
-}
-
 @keyframes right-arm-anim {
   0% {
     transform: rotateZ(-20deg);
@@ -118,55 +162,5 @@
   }
   100% {
     transform: rotateZ(-10deg);
-  }
-}
-#upper-body-group, #lower-body-group {
-  transform-origin: 50% 60%;
-}
-
-#above-ribs-group {
-  transform-origin: 50% 45%;
-}
-
-#head-group {
-  transform-origin: 50% 26%;
-}
-
-#head {
-  transform-origin: 50% 24%;
-}
-
-#right-leg-group {
-  transform-origin: 43% 68%;
-}
-
-#front-leg-group {
-  transform-origin: 43% 82%;
-}
-
-#left-leg-group {
-  transform-origin: 57% 68%;
-}
-
-#front-leg-group_2 {
-  transform-origin: 57% 82%;
-}
-
-#upper-body-group, #above-ribs-group {
-  animation: test var(--timing) ease-in-out infinite;
-}
-
-@keyframes test {
-  0% {
-    transform: rotateZ(0);
-  }
-  25% {
-    transform: rotateZ(20deg);
-  }
-  75% {
-    transform: rotateZ(-20deg);
-  }
-  100% {
-    transform: rotateZ(0);
   }
 }/*# sourceMappingURL=character.css.map */
