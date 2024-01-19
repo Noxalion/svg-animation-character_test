@@ -1,5 +1,9 @@
 :root {
   --timing: 1.5s;
+  --skin-color: #C28640;
+  --shirt-color: #500463;
+  --trousers-color: #3F7FCB;
+  --shoes-color: #000000;
 }
 
 .btnContainer {
@@ -16,30 +20,65 @@
   height: 45vh;
   overflow: visible;
 }
+.svg .skin {
+  fill: var(--skin-color);
+}
+.svg .shirt {
+  fill: var(--shirt-color);
+}
+.svg .trousers {
+  fill: var(--trousers-color);
+}
+.svg .shoes {
+  fill: var(--shoes-color);
+}
 .svg * {
   animation-delay: 0.2s;
 }
 .svg.wave #hand {
-  animation: left-hand-anim var(--timing) ease-in-out infinite;
+  animation: left-hand-wave var(--timing) ease-in-out infinite;
 }
 .svg.wave #left-arm-group {
-  animation: left-arm-anim var(--timing) ease-in-out infinite;
+  animation: left-arm-wave var(--timing) ease-in-out infinite;
 }
 .svg.wave #front-arm-group {
-  animation: left-front-arm-anim var(--timing) ease-in-out infinite;
+  animation: left-front-arm-wave var(--timing) ease-in-out infinite;
 }
 .svg.wave #hand_2 {
-  animation: right-hand-anim var(--timing) ease-in-out infinite;
+  animation: right-hand-wave var(--timing) ease-in-out infinite;
 }
 .svg.wave #right-arm-group {
-  animation: right-arm-anim var(--timing) ease-in-out infinite;
+  animation: right-arm-wave var(--timing) ease-in-out infinite;
 }
 .svg.wave #front-arm-group_2 {
-  animation: right-front-arm-anim var(--timing) ease-in-out infinite;
+  animation: right-front-arm-wave var(--timing) ease-in-out infinite;
 }
-.svg.stop #hand, .svg.stop #left-arm-group, .svg.stop #front-arm-group, .svg.stop #hand_2, .svg.stop #right-arm-group, .svg.stop #front-arm-group_2, .svg.stop #upper-body-group, .svg.stop #lower-body-group,
-.svg.stop #above-ribs-group, .svg.stop #head-group, .svg.stop #head, .svg.stop #right-leg-group, .svg.stop #front-leg-group, .svg.stop #left-leg-group, .svg.stop #front-leg-group_2 {
-  animation-play-state: paused;
+.svg.warming #character {
+  animation: character-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #left-arm-group {
+  animation: left-arm-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #front-arm-group {
+  animation: left-front-arm-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #right-arm-group {
+  animation: right-arm-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #front-arm-group_2 {
+  animation: right-front-arm-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #right-leg-group {
+  animation: right-leg-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #front-leg-group {
+  animation: right-front-leg-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #left-leg-group {
+  animation: left-leg-warm var(--timing) ease-in-out infinite;
+}
+.svg.warming #front-leg-group_2 {
+  animation: left-front-leg-warm var(--timing) ease-in-out infinite;
 }
 
 #hand {
@@ -98,7 +137,7 @@
   transform-origin: 57% 82%;
 }
 
-@keyframes left-arm-anim {
+@keyframes left-arm-wave {
   0% {
     transform: rotateZ(20deg);
   }
@@ -109,7 +148,7 @@
     transform: rotateZ(20deg);
   }
 }
-@keyframes left-front-arm-anim {
+@keyframes left-front-arm-wave {
   0% {
     transform: rotateZ(5deg);
   }
@@ -120,7 +159,7 @@
     transform: rotateZ(5deg);
   }
 }
-@keyframes left-hand-anim {
+@keyframes left-hand-wave {
   0% {
     transform: rotateZ(10deg);
   }
@@ -131,7 +170,7 @@
     transform: rotateZ(10deg);
   }
 }
-@keyframes right-arm-anim {
+@keyframes right-arm-wave {
   0% {
     transform: rotateZ(-20deg);
   }
@@ -142,7 +181,7 @@
     transform: rotateZ(-20deg);
   }
 }
-@keyframes right-front-arm-anim {
+@keyframes right-front-arm-wave {
   0% {
     transform: rotateZ(-5deg);
   }
@@ -153,7 +192,7 @@
     transform: rotateZ(-5deg);
   }
 }
-@keyframes right-hand-anim {
+@keyframes right-hand-wave {
   0% {
     transform: rotateZ(-10deg);
   }
@@ -162,5 +201,104 @@
   }
   100% {
     transform: rotateZ(-10deg);
+  }
+}
+@keyframes left-arm-warm {
+  0% {
+    transform: rotateZ(80deg);
+  }
+  50% {
+    transform: rotateZ(-50deg);
+  }
+  100% {
+    transform: rotateZ(80deg);
+  }
+}
+@keyframes left-front-arm-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-30deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes right-arm-warm {
+  0% {
+    transform: rotateZ(-80deg);
+  }
+  50% {
+    transform: rotateZ(50deg);
+  }
+  100% {
+    transform: rotateZ(-80deg);
+  }
+}
+@keyframes right-front-arm-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(30deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes character-warm {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes right-leg-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes right-front-leg-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes left-leg-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(-45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+@keyframes left-front-leg-warm {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(45deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }/*# sourceMappingURL=character.css.map */
